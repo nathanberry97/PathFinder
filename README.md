@@ -1,5 +1,5 @@
 # PathFinder
 
-Programmed in Java to demonstrate path finding algorithms  
+Programmed in Python to demonstrate path finding algorithms  
 
 Created by Nathan Berry
