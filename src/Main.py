@@ -1,4 +1,5 @@
 from Grid import Grid
+from Algorithm import Algorithm
 import pygame
 pygame.init
 
@@ -14,8 +15,9 @@ def main():
     pygame.display.set_caption('Path Finder')
 
     gameMenu = True
-    
+   
     border = Grid(display)
+    algo = Algorithm()
 
     while gameMenu:
 
