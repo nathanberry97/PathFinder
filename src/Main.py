@@ -7,6 +7,7 @@ def main():
     BLACK = (0, 0, 0)
     RED = (255, 0, 0)
     GREEN = (0, 255, 0)
+    BLUE = (0, 0, 255)
     WHITE = (255, 255, 255)
     GREY = (128, 128, 128)
 
@@ -17,6 +18,7 @@ def main():
     begin = True
    
     border = Grid(display)
+    algo = Algorithm(display, BLUE)
 
     while begin:
 
@@ -27,6 +29,9 @@ def main():
         display.fill(WHITE)
 
         border.node(GREEN, RED)
+
+        algo.breadthFirstSearch()
+
         border.wall(GREY)
         border.grid(BLACK)
 
