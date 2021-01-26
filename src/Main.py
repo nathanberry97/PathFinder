@@ -26,12 +26,14 @@ def main():
             if event.type == pygame.QUIT:
                 begin = False
         
+        solution = pygame.key.get_pressed()
+
         display.fill(WHITE)
 
+        if solution[pygame.K_SPACE]:
+            algo.breadthFirstSearch()
+
         border.node(GREEN, RED)
-
-        algo.breadthFirstSearch()
-
         border.wall(GREY)
         border.grid(BLACK)
 

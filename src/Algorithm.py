@@ -71,7 +71,7 @@ class Algorithm:
                 x += 1
             
         if maze[x][y] == "X":
-            self.drawPath(path)
+            self.drawSolution(path)
             return True
 
         return False
@@ -90,3 +90,24 @@ class Algorithm:
                 move = add + i
                 if self.validMove(maze, move):
                     path.put(move)
+    
+    def drawSolution(self, path):
+        x = 10
+        y = 10
+
+        for move in path:
+            if move == "L":
+                y = y - self.blockSize
+                pygame.draw.rect(self.screen, self.colour, [y, x, self.blockSize, self.blockSize])
+            
+            if move == "R":
+                y = y + self.blockSize
+                pygame.draw.rect(self.screen, self.colour, [y, x, self.blockSize, self.blockSize])
+            
+            if move == "U":
+                x = x - self.blockSize
+                pygame.draw.rect(self.screen, self.colour, [y, x, self.blockSize, self.blockSize])
+            
+            if move == "D":
+                x = x + self.blockSize
+                pygame.draw.rect(self.screen, self.colour, [y, x, self.blockSize, self.blockSize])
