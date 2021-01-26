@@ -14,23 +14,22 @@ def main():
     display = pygame.display.set_mode(size)
     pygame.display.set_caption('Path Finder')
 
-    gameMenu = True
+    begin = True
    
     border = Grid(display)
-    algo = Algorithm()
 
-    while gameMenu:
+    while begin:
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
-                gameMenu = False
+                begin = False
         
         display.fill(WHITE)
 
         border.node(GREEN, RED)
         border.wall(GREY)
         border.grid(BLACK)
-        
+
         pygame.display.update()
     
     pygame.quit
